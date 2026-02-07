@@ -82,18 +82,26 @@
 # max_n = f(3, 5, 2, 8, 1)
 # print(max_n)  # Output: 8
 
-def max_value(number):
-    if len(number) == 0:
-        print("No numbers provided")
-        return None
-    else:
-        max_num = number[0]
-        for num in number:
-            if num > max_num:
-                max_num = num
-        return max_num
+# def max_value(number):
+#     if len(number) == 0:
+#         print("No numbers provided")
+#         return None
+#     else:
+#         max_num = number[0]
+#         for num in number:
+#             if num > max_num:
+#                 max_num = num
+#         return max_num
             
-numbs = [1, 3, 5, 8, 9, 4, 11, 1]
+# numbs = [1, 3, 5, 8, 9, 4, 11, 1]
 
-max_n = max_value(numbs)
-print(max_n)            
+# max_n = max_value(numbs)
+# print(max_n)            
+
+
+# fruits = ["apple", "apple", "banana", "cherry", "orange"]
+# if fruits[0] == "apple":
+#     print("The first fruit is apple")
+# else:
+#     print("The first fruit is not apple")
+
