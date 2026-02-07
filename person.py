@@ -9,7 +9,7 @@ def add_person():
 
 def view_all_person():
     if not persons:
-        print("No persons found.")
+        print("No persons found.\n")
     else:
         for index, person in enumerate(persons):
             # print(f"{index + 1}. Name: {person[0]}, Age: {person[1]}, Marks: {person[2]}, City: {person[3]}, Country: {person[4]}")
@@ -50,6 +50,14 @@ def find_person():
         name = input("Enter the name of the person to find: ")
         found = False
         for person in persons:
+            # to search by any field, we can use the following code:
+            #   for field in person:
+            #     if str(field).lower() == query.lower():
+            #         print(f"Name: {person[0]}, Age: {person[1]}, Marks: {person[2]}, City: {person[3]}, Country: {person[4]}")
+            #         found = True
+            #         break
+            
+            # to search by name only, we can use the following code:
             if person[0].lower() == name.lower():
                 print(f"Name: {person[0]}, Age: {person[1]}, Marks: {person[2]}, City: {person[3]}, Country: {person[4]}")
                 found = True
