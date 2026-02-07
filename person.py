@@ -1,3 +1,5 @@
+# Define a list to store person information. Each person is represented as a list containing name, age, marks, city, and country. It will add person information, view all persons, edit a person's information, delete a person, and find a person by name. The program will continue to run until the user chooses to exit.
+
 def add_person():
     name = input("Enter name: ")
     age = int(input("Enter age: "))
