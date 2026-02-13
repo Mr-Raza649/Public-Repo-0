@@ -37,7 +37,7 @@ def add_stu():
             print(f"Student is added successfully. ")
                 
             students = tuple(studentsList)
-            print("Students data is again converted into tupple format  successfully. ")
+            print("Students data is again converted into tupple format  successfully.")
                 
     except ValueError:
         print("Invalid input. Please enter a valid name. ") 
@@ -89,7 +89,7 @@ while True:
         elif choice == "3":
             view_all_stu()
         elif choice == "4":
-            print("\nProgram Exit 😊\n. ")
+            print("\nProgram Exit 😊 ")
             break
         else:
             print("Invalid choice. Please enter a valid option. ")  
