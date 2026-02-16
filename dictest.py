@@ -34,12 +34,13 @@ students = {}
 def main_menu():
     print("1. Add student: ")
     print("2. View students: ")
-    print("3. Exit Program: ")
+    print("3. Update Student: ")
+    print("4. Exit Program")
 
 def add_student():
     
     try:    
-        students["name"] = input("Enter student name: ").capitalize()
+        students["name"] = input("Enter student name: ").strip()
         students["age"] = int(input("Enter age: "))
         
         # creating sub_dictionary subjects
@@ -58,6 +59,29 @@ def add_student():
         
     except Exception as e:
         print(f"Invalid input {e}") 
+        
+def update_student():
+    name =  input("Enter name of student whoes data you want to update: ").strip()
+    try:
+        if name in students:
+            name_ = input("Enter name of student: ")
+            age_ = input("Enter age")
+            math_ = input("Enter Math Marks: ")
+            
+            students[name].update({
+                "name": name_,
+                "age": age_,
+            })
+            
+            students[name]["subjects"]["math"] = math_
+            print("Student data updated successfully: ")
+        else:
+            print("Student not found. ")
+            print("You entered:", name)
+            print("Dictionary keys:", students.keys())
+
+    except Exception as e:
+        print(f"Invalid data {e}")
            
 def view_students():        
     for key, value in students.items():
@@ -80,6 +104,8 @@ while True:
     elif choice == "2":
         view_students()
     elif choice == "3":
+        update_student()
+    elif choice == "4":
         print("Program Exit.... ")
         break
     else:
